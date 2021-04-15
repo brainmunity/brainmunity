@@ -67,7 +67,7 @@
     <script>
         let jsolution = {
             // INICIO DE CAMBIAR TITULO
-            "intro": "Elija la declaración correcta..",
+            "intro": "Elija la declaración correcta sobre los arandanos...",
              // FIN DE CAMBIAR TITULO
             "summaries": [
                 //FRASES CORRECTAS
@@ -78,20 +78,31 @@
                         "Los arándanos son bayas redondas no comestibles.\n"
                     ],
                     "tip": "Los arándanos se utilizan en mermelada de arándanos ",
-                    "subContentId": "6e5c14ce-1367-4bf1-b003-63b3d3681091"
+                   
                 },
                  //FRASES INCORRECTAS
                 {
                     "summary": [
                         "Los arándanos se vuelven azules al madurar.\n",
-                        "Los arándanos se vuelven verdes al madurar.\n"
+                        "Los arándanos se vuelven verdes al madurar.\n",
+                        "Los arándanos son duras al madurar.\n",
                     ],
                     "tip": "",
-                    "subContentId": "f8c2ecc0-2112-407d-8eb3-79d37e7fff85"
+                    
+                },
+                                 //FRASES INCORRECTAS
+                {
+                    "summary": [
+                        "Los arándanos son frutos del bosque.\n",
+                        "Los arándanos son frutos de la alta montaña.\n",
+                        "Los arándanos son frutos que crecen en las rocas.\n",
+                    ],
+                    "tip": "los arándanos crecen en ambientes de alta vegetación y humedad",
+                    
                 }
                 // FIN FRASES
             ],
-            "solvedLabel": "Progress:",
+            "solvedLabel": "Su Progreso:",
             "scoreLabel": "respuestas incorrectas:",
             "resultLabel": "Su Resultado",
             "overallFeedback": [
@@ -112,10 +123,10 @@
         let jsoltext = JSON.stringify(jsolution);
 
         H5PIntegration = {
-            baseUrl: "https://h5p.org",
-            url: "/sites/default/files/h5p",
+            baseUrl: "",
+            url: "",
             postUserStatistics: false,
-            ajax: { setFinished: "/h5p-ajax/set-finished.json?token=8781817e0c2cb", contentUserData: "/h5p-ajax/content-user-data/:contentId/:dataType/:subContentId?token=0d86bb05da2cc" },
+            ajax: { setFinished: "", contentUserData: "" },
             saveFreq: false,
             l10n: {
                 H5P: {
@@ -140,10 +151,9 @@
                     reuse: "Reuse",
                     reuseContent: "Reuse Content",
                     reuseDescription: "Reuse this content.",
-                    downloadDescription: "Download this content as a H5P file.",
+                    downloadDescription: "",
                     copyrightsDescription: "View copyright information for this content.",
                     embedDescription: "View the embed code for this content.",
-                    h5pDescription: "Visit H5P.org to check out more cool content.",
                     contentChanged: "This content has changed since you last used it.",
                     startingOver: "You'll be starting over.",
                     by: "by",
@@ -194,20 +204,20 @@
             crossoriginCacheBuster: null,
             libraryConfig: null,
             pluginCacheBuster: "?qnc526",
-            libraryUrl: "/sites/all/modules/h5p/library/js",
-            siteUrl: "https://h5p.org/",
+            libraryUrl: "",
+            siteUrl: "",
             contents: {
                 "cid-714": {
                     library: "H5P.Summary 1.10",
                     jsonContent:jsoltext,
                     fullScreen: "0",
-                    exportUrl: "https://h5p.org/sites/default/files/h5p/exports/summary-714.h5p",
-                    embedCode: '<iframe src="https://h5p.org/h5p/embed/713" width=":w" height=":h" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *"><\/iframe>',
+                    exportUrl: "",
+                    embedCode: '',
                     resizeCode: '<script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"><\/script>',
                     mainId: "713",
-                    url: "https://h5p.org/node/713",
+                    url: "",
                     contentUserData: [{ state: "{}" }],
-                    displayOptions: { frame: true, export: true, embed: true, copyright: true, icon: true, copy: false },
+                    displayOptions: { frame: true, export: true, embed: true, copyright: false, icon: true, copy: false },
                     metadata: { license: "U", title: "Summary" },
                 },
             },
