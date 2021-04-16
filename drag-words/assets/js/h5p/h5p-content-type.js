@@ -1,2 +1,0 @@
-H5P.ContentType=function(isRootLibrary){function ContentType(){}
-ContentType.prototype=new H5P.EventDispatcher();ContentType.prototype.isRoot=function(){return isRootLibrary;};ContentType.prototype.getLibraryFilePath=function(filePath){return H5P.getLibraryPath(this.libraryInfo.versionedNameNoSpaces)+'/'+filePath;};return ContentType;};

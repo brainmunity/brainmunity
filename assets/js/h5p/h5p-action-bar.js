@@ -1,6 +1,0 @@
-H5P.ActionBar=(function($,EventDispatcher){"use strict";function ActionBar(displayOptions){EventDispatcher.call(this);var self=this;var hasActions=false;var $actions=H5P.jQuery('<ul class="h5p-actions"></ul>');var addActionButton=function(type,customClass){var handler=function(){self.trigger(type);};H5P.jQuery('<li/>',{'class':'h5p-button h5p-noselect h5p-'+(customClass?customClass:type),role:'button',tabindex:0,title:H5P.t(type+'Description'),html:H5P.t(type),on:{click:handler,keypress:function(e){if(e.which===32){handler();e.preventDefault();}}},appendTo:$actions});hasActions=true;};if(displayOptions.export||displayOptions.copy){addActionButton('reuse','export');}
-if(displayOptions.copyright){addActionButton('copyrights');}
-if(displayOptions.embed){addActionButton('embed');}
-if(displayOptions.icon){H5P.jQuery('<li><a class="h5p-link" href="http://h5p.org" target="_blank" title="'+H5P.t('h5pDescription')+'"></a></li>').appendTo($actions);hasActions=true;}
-self.getDOMElement=function(){return $actions;};self.hasActions=function(){return hasActions;};}
-ActionBar.prototype=Object.create(EventDispatcher.prototype);ActionBar.prototype.constructor=ActionBar;return ActionBar;})(H5P.jQuery,H5P.EventDispatcher);
